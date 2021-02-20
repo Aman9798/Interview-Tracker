@@ -1,0 +1,125 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 10px 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+body {
+  background-image: url('../Site_logos/web3.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 10px;
+  color: white;
+}
+nav  ul li:nth-child(1){
+    font-size: 35px;
+    /* font-weight: bold; */
+}
+nav  ul li:nth-child(2){
+  margin-left: 730px;
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+nav ul li:nth-child(3)  {
+    margin-left: 30px;
+    background-color: rgb(39, 38, 38); 
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 36px;
+}
+nav ul li:nth-child(4){
+  margin-left: 30px;
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btns:hover{
+  background: -webkit-linear-gradient(left, #ffffff, #726f74);
+}
+.btn2:hover{
+  background: -webkit-linear-gradient(left, #726f74, white);
+}
+.btn2{
+  border-radius: 23px;
+  background: -webkit-linear-gradient(left, #ffffff, #726f74);
+  padding: 15px;
+  font-size: 40px;
+}
+h1{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-size: 70px;
+    font-weight: 650;
+    color: rgb(255, 255, 255);
+}
+
+/* header khatam*/
+
+.navs{
+  display: inline-flex;
+  /* background-color: rgb(22, 22, 22); 
+  box-shadow: 0 0 1rem rgba(161, 161, 161, 0.2); */
+  border-width: 4px;
+  border-style: inset;
+  border-color: white;
+  max-width: 100rem;
+  width: 95%;
+  margin-left: 30px;
+  margin-top: 30px;
+  align-items: center;
+  height: 20rem;
+  border-radius: 1rem;
+}
+
+.logo{
+  align-self: center;
+  height: 25em;
+  width: 42em;
+  padding: 0;
+  /* transform: translateX(-2rem); */
+  transform: translateY(-1.5rem);
+}
+
+.gotos{
+  display: inline;
+  text-align: left;
+  /* text-emphasis: bolder; */
+}

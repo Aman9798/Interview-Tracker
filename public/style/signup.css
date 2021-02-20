@@ -1,0 +1,193 @@
+ /* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 5px 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+body {
+  background-image: url('../Site_logos/web3.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  padding-top: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-top: -10px;
+   margin-left: 5px;
+   font-weight: 500;
+   color: white;
+}
+nav  ul li:nth-child(1){
+    font-size: 30px;
+}
+nav ul li:nth-child(2)  {
+    margin-left: 1055px; 
+}
+nav ul li:nth-child(3){
+    margin-left: 25px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn{
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+.btn:hover{
+    background: -webkit-linear-gradient(left, #ffffff, #726f74);
+  }
+h1{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 70px;
+    font-weight: 600;
+    color: rgb(240, 226, 226);
+}
+form{
+  margin-top: 25px;
+  width: 400px;
+  height: 720px;
+  margin-left: 500px;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  background: rgb(233, 232, 232);
+}
+form h2{
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 23px;
+  }
+input{
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid rgb(77, 75, 75);
+  font-size: 1em;
+  width: 100%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+  font-size: 25px;
+  font-weight: 550;
+}
+button{
+  margin-top: 30px;
+  margin-left: 154px;
+  border-radius: 36px;
+  background: #1d1c1b;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: white;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+button:hover{
+    background: -webkit-linear-gradient(right, #646262, #020202);
+  }
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 250px;
+  margin-right: 40px;
+}
+header h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.topics{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80PX AUTO;
+  max-width: 1200px;
+}
+.topic{
+  display: inline-block;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px
+}
+.topic img{
+  width: 100px;
+  margin: -30px auto 20px;
+}
+footer{
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+.switch1{
+  margin-top: 20px;
+  margin-left: 60px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.switch{
+  color: blue;
+  margin: 10px 10px;
+  
+}
+.switch:hover{
+  text-decoration: underline;
+} 

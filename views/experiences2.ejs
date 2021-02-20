@@ -1,0 +1,91 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation</title>
+
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/experiences.css">
+
+    <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <% if(user){ %>
+          <li><a href='/companies' class='back'> &#8592; Back</a> </li>
+          <% var x = user.name %>
+          <% x = x.split(' '); %>
+          <% let y = x[0]; %>
+          <% if(user.Admin){ %>
+            <li class='btns'><a href='/admin' class='admin'>Admin Page</a></li>
+          <% } %>
+          <li>Welcome : <strong><%= y %></strong></li>
+          <li class="btns"><a href='/logout' class='logout'>Log out</a></li>
+        <% } %>
+      </ul>
+    </nav>
+
+    <h1>INTERVIEW TRACKER</h1>
+    <h2>Experiences: <%= name %></h2>
+    <div id="exps">
+      <ul>
+        
+        <% for(var i=0; i < exp.length; i++){  %>
+          <% if(exp[i].verify){ %>
+          
+            <div class='cards'>
+              <div class='image' >
+                <img src="<%= exp[i].imgSrc %>" style ='height: 100px; width: 100px;'>
+              </div>
+              <div class="info">
+                <div class='credentials'>
+                  <h4><%= person[i].name %>, <%= person[i].branch %>'<%= person[i].year %></h4>
+                </div>
+                <div class='description'>
+                  <% var txt = exp[i].experience.split('\r\n'); %>
+                  <% var text = txt.join("<br>") %>
+                  <% var index = 706; %>
+                  <% var part1 = text.substr(0, index); %>
+                  <% var part2 = text.substr(index+1); %>
+                  <p><%= part1 %></p>
+                      <% j = "1000"+i; %>
+                      <p id="text" class=<%= j %>><%= part2 %></p>
+                      <!-- <p id="text" class=<%= j %>><%= part2 %></p> -->
+              </div>
+              <div class="bt">
+                <button id="toggle" class=<%= i %>>Read More</button>
+              </div>
+                </div>
+            </div>
+      
+            <% }} %>
+        </ul>
+    </div>
+
+
+  </body>
+</html>
+
+<script>
+
+  const list = document.getElementById('exps')
+  list.addEventListener('click',function(e){
+      var elem = e.target.innerHTML;
+      var val = e.target.className
+      val = ".1000"+val;
+      if (elem == "Read More") {
+          e.target.innerHTML = "Read Less";
+          $(val).slideDown();
+      }else if(elem == "Read Less"){
+          e.target.innerHTML = "Read More";
+          $(val).slideUp();
+      }
+  })
+</script>

@@ -1,0 +1,122 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/signup.css">
+  
+</head>
+<body>
+  <nav>
+    <!-- <h1><a href="/">Interview</a></h1> -->
+    <ul>
+      <!-- <% if(user){ %>
+        <li>Welcome, <%= user.name %></li>
+        <li><a href='/logout'>Log out</a></li>
+      <% }else{ %> -->
+        <li>IIT Guwahati</li>
+        <li><a href='/login'  class='btn'>Log in</a></li>
+        <li><a href='/signup' class='btn'>Sign up</a></li>
+      <!-- <% } %> -->
+    </ul>
+  </nav>
+  
+  <h1>INTERVIEW TRACKER</h1>
+<!--<%- include('partials/header'); -%>-->
+
+<form>
+    <h2>Sign up</h2>
+
+    <label for='name'>Name</label>
+    <input type='text' name='name' required />
+    <div class="name error"></div>
+
+    <!-- <label for='year'>Year</label>
+    <input type='text' name='year' required />
+    <div class="year error"></div>
+
+    <label for='branch'>Branch</label>
+    <input type='text' name='branch' required />
+    <div class="branch error"></div> -->
+
+    <label for='email'>Email</label>
+    <input type='text' name='email' required />
+    <div class="email error"></div>
+
+    <label for='branch'>Branch</label>
+    <input type='text' name='branch' required />
+    <div class="branch error"></div>
+
+    <label for='year'>Year</label>
+    <input type='text' name='year' required />
+    <div class="year error"></div>
+
+    <label for='password'>Password</label>
+    <input type='password' name='password' required />
+    <div class="password error"></div>
+
+    <button>Sign up</button>
+
+    <p class='switch1'>Have a account? <a href='./login' class="switch">Log in</a></p>
+</form>
+
+<script>
+    const form = document.querySelector('form');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+    const nameError = document.querySelector('.name.error');
+    const branchError = document.querySelector('.branch.error');
+    const yearError = document.querySelector('.year.error');
+
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();             // this prevents the signup page from reloading
+
+        //reset errors
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        nameError.textContent = '';
+        branchError.textContent = '';
+        yearError.textContent = '';
+        
+        //get values
+        const email = form.email.value;
+        const password = form.password.value;
+        const name = form.name.value;
+        const branch = form.branch.value;
+        const year = form.year.value;
+       // const branch = form.branch.value;
+        //const year = form.year.value;
+
+        try{
+            const res = await fetch('/signup', {    //fetching data from authControllers -> signup_post
+                method: 'POST',
+                body: JSON.stringify({email: email, password: password, name: name, branch: branch, year: year}),
+                // body: JSON.stringify({email: email, password: password, name: name}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+             console.log(data);
+            if(data.errors){
+                emailError.textContent = data.errors.email;
+                passwordError.textContent = data.errors.password;
+                nameError.textContent = data.errors.name;
+                branchError.textContent = data.errors.branch;
+                yearError.textContent = data.errors.year;
+            }
+            if(data.user){
+                location.assign('/');
+            }
+        }
+        catch(err){
+            console.log(err);
+        }
+    });
+</script>
+
+<!--<%- include('partials/footer'); -%>-->
+
+<footer>Copyright 2021</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/login.css">
+  
+</head>
+<body>
+  <nav>
+    <!-- <h1>IIT Guwahti</h1>
+    <ul>
+      <% if(user){ %>
+        <li>Welcome, <%= user.name %></li>
+        <li><a href='/logout'>Log out</a></li>
+      <% }else{ %>
+        <li><a href='/login'>Log in</a></li>
+        <li><a href='/signup' class='btn'>Sign up</a></li>
+      <% } %>
+    </ul> -->
+    <ul>
+      <!-- <% if(user){ %>
+        <li>IIT Guwahati</li>
+        <li>Welcome: <%= user.name %></li>
+        <li><a href='/logout' class='logout'>Log out</a></li>
+      <% }else{ %> -->
+        <li>IIT Guwahati</li>
+        <li><a href='/login' class= 'btn'>Log in</a></li>
+        <li><a href='/signup' class='btn'>Sign up</a></li>
+      <!-- <% } %> -->
+    </ul>
+  </nav>
+   
+  <h1>INTERVIEW TRACKER</h1>
+
+<!--<%- include('partials/header'); -%>-->
+
+<form>
+    <h2>Log in</h2>
+
+    <label for='email'>Email</label>
+    <input type='text' name='email' required />
+    <div class="email error"></div>
+
+    <label for='password'>Password</label>
+    <input type='password' name='password' required />
+    <div class="password error"></div>
+
+    <button>Log in</button>
+
+    <p class='switch1'>Don't have a account? <a href='./signup' class='switch'>Sign up</a></p>
+</form>
+
+<script>
+    const form = document.querySelector('form');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();             // this prevents the signup page from reloading
+
+        //reset errors
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        
+        //get values
+        const email = form.email.value;
+        const password = form.password.value;
+
+        try{
+            const res = await fetch('/login', {    //fetching data from authControllers -> login_post
+                method: 'POST',
+                body: JSON.stringify({email: email, password: password}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log(data);
+            if(data.errors){
+                emailError.textContent = data.errors.email;
+                passwordError.textContent = data.errors.password;
+            }
+            if(data.user){
+                location.assign('/');
+            }
+        }
+        catch(err){
+            console.log(err);
+        }
+    });
+</script>
+
+<!--<%- include('partials/footer'); -%>-->
+
+<footer>Copyright 2021</footer>
+</body>
+</html>

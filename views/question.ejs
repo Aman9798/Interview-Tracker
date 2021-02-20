@@ -1,0 +1,48 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/question.css">
+  
+</head>
+<body>
+  <nav>
+    <ul>
+      <% if(user){ %>
+        <li><a href='/topics' class='back'> &#8592; Back</a> </li>
+        <% var x = user.name %>
+        <% x = x.split(' '); %>
+        <% let y = x[0]; %>
+        <% if(user.Admin){ %>
+          <li class='btns'><a href='/admin' class='admin'>Admin Page</a></li>
+        <% } %>
+        <li>Welcome : <strong><%= y %></strong></li>
+        <li class="btns"><a href='/logout' class='logout'>Log out</a></li>
+      <% } %>
+    </ul>
+  </nav>
+
+<h1>INTERVIEW TRACKER</h1>
+
+<h2>TOPIC : <%= name %></h2>
+
+    <div id='questions'>
+        <ul>
+            <%let z; %>
+            <% for(var i=0; i < ques.length; i++){  %>
+              <% if(ques[i].verify){ %>
+                <% z = ques[i].link %>
+                <li><span><%= i+1 %>)  </span><a href=<%= z %>>  <%= ques[i].name %></a></li>
+            <% }} %>
+        </ul>
+    </div>
+
+<script>
+
+
+</script>
+
+</body>
+</html>

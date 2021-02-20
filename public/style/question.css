@@ -1,0 +1,135 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 5px 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+body {
+  background-image: url('../Site_logos/web3.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 10px;
+  color: white;
+}
+nav  ul li:nth-child(2){
+  margin-left: 905px;
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+nav ul li:nth-child(3)  {
+    margin-left: 30px;
+    background-color: rgb(39, 38, 38); 
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 36px;
+}
+nav ul li:nth-child(4){
+  margin-left: 30px;
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btns:hover{
+  background: -webkit-linear-gradient(left, #ffffff, #726f74);
+}
+.btn2:hover{
+  background: -webkit-linear-gradient(left, #726f74, white);
+}
+.btn2{
+  border-radius: 23px;
+  background: -webkit-linear-gradient(left, #ffffff, #726f74);
+  padding: 15px;
+  font-size: 40px;
+}
+h1{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+h2{
+  font-size: 55px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 60px;
+    font-weight: 400;
+  text-transform: uppercase;
+  }
+.back{
+  /* display: flex;
+    align-items: center; */
+  margin-top: 10px;
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+  border-radius: 36px;
+  background: linear-gradient(to right, rgb(141, 141, 141), rgba(255,255,255));
+  }
+#questions{
+    display: grid;
+    margin-top: 30px;
+    margin-left: 130px;
+  }
+#questions ul{
+  display: list-item;
+  color: white;
+    font-weight: bold;
+}
+  #questions li{
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(192, 189, 183);
+  }
+  #questions li span{
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #questions li a{
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }

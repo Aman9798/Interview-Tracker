@@ -1,0 +1,111 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+body {
+  background-image: url('../Site_logos/web3.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+p{
+    display: inline;
+}
+
+
+a{
+  text-decoration: none;
+}
+.back{
+    margin-top: 22px;
+    width: 140px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7em;
+    display: block;
+    padding: 8px 14px;
+    letter-spacing: 1.6px;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgb(141, 141, 141), rgba(255,255,255));
+}
+
+.back:hover{
+    background: linear-gradient(to left, rgb(141, 141, 141), rgba(255,255,255));
+}
+
+.btn{
+  border-radius: 36px;
+  background: -webkit-linear-gradient(right, #ffffff, #726f74);
+}
+
+header{
+  display: flex;
+  align-items: center;
+}
+
+header h2{
+  font-size: 70px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 51px;
+
+}
+
+form{
+  margin-top: 45px;
+  width: 450px;
+  height: 380px;
+  margin: 30px auto;
+  /* margin-left: 450px; */
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  background: rgb(233, 232, 232);
+}
+
+p{
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: block;
+  border: 1px solid rgb(77, 75, 75);
+  font-size: 0.9em;
+  width: 95%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+  font-size: 20px;
+  font-weight: 550;
+}
+button{
+  margin-top: 30px;
+  margin-left: 24px;
+  border-radius: 36px;
+  background:-webkit-linear-gradient(left, #646262, #020202);
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: white;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.page{
+    color: white;
+}
+button:hover{
+    background: -webkit-linear-gradient(right, #646262, #020202);
+}

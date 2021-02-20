@@ -1,0 +1,193 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/topic2.css">
+  
+</head>
+<body>
+  <nav>
+    <ul>
+      <% if(user){ %>
+        <li><a href='/home' class='back'> &#8592; Back</a> </li>
+        <% var x = user.name %>
+        <% x = x.split(' '); %>
+        <% let y = x[0]; %>
+        <% if(user.Admin){ %>
+          <li class='btns'><a href='/admin' class='admin'>Admin Page</a></li>
+        <% } %>
+        <li>Welcome : <strong><%= y %></strong></li>
+        <li class="btns"><a href='/logout' class='logout'>Log out</a></li>
+      <% } %>
+    </ul>
+  </nav>
+ 
+
+
+<h1>INTERVIEW TRACKER</h1>
+
+<h2 class='abc'>Topics:</h2>
+
+<div id='topicss'>
+        <!-- <ul >
+            <% for(var i=0; i < top.length; i++){  %>
+              <% if(top[i].verify){ %>
+                <li><a><%= top[i].name %></a></li>
+            <% }} %>
+        </ul> -->
+        <ul >
+          <% for(var i=0; i < top.length; i++){  %>
+            <% if(top[i].verify){ %>
+              <% var t = "topics/" + top[i].name %>
+              <li>
+                <a href=<%= t %>>
+                  <div class='cards'>
+                    <div class='image' >
+                      <img src=<%= top[i].image %>>
+                    </div>
+                    <div class='title'>
+                      <h2><a><%= top[i].name %></a></h2>
+                    </div>
+                  </div>
+                </a>
+              </li>
+          <% }} %>
+      </ul>
+</div>
+
+<div class="center">
+    <input type="checkbox" id="show">
+    <label for="show" class="show-btn">Add Question</label>
+    <div class="container">
+        <label for="show" class="close-btn fas fa-times" title="close">X</label>
+        <!-- <div  id ='status' class="submit error"></div> -->
+        <div class="text">Add Question</div>
+        <form action="#">
+            <div class="data">
+                <label for='topic'>Already Present Topic</label>
+                <!--<input type="text" name='topic' required>-->
+                <select name='topic'>
+                  <option value='topic'>New Topic</option>
+                  <% for(var i=0; i < top.length; i++){  %>
+                    <% if(top[i].verify){ %>
+                      <% x = top[i].name %>
+                      <option value=<%= x %>><%= x %></option>
+                    <% }} %>
+                </select>
+                <div class="topic error" ></div>
+            </div>
+            <div class="data">
+              <label for='topic_new'> New Topic</label>
+              <input type="text" name='topic_new' placeholder="Don't fill if topic is already present (Don't include space in name)">
+              <div class="n_topic error" ></div>
+            </div>
+            <div class='data'>
+              <label for='logo'>New Topic Logo</label>
+              <input type='text' name='logo' placeholder="Only add Topic's logo link when new topic is added   'Not Necessary'">
+              <div class='logo error'></div>
+            </div>
+            <div class="data">
+                <label for='name'>Name</label>
+                <input type="text" name='name' required>
+                <div class="name error"></div>
+            </div>
+            <div class="data">
+                <label for='link'>Link</label>
+                <input type="text" name='link' required>
+                <div class="link error"></div>
+            </div>
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">Add</button>
+                <!--<div class="submit error" style="color: black; margin-top: 30px;"></div>-->
+            </div> 
+            <div  id ='status' class="submit error"></div>
+        </form>
+    </div>
+</div>
+
+<script>
+  const list = document.getElementById('topicss')
+  var topic2 = window.document.location.pathname;
+  list.addEventListener('click',function(e){
+    var topic = e.target.innerHTML;
+    var topic3 = topic2 + '/' + topic;
+    e.target.setAttribute('href',topic3); 
+
+  })
+  const form = document.querySelector('form');
+  const topicError = document.querySelector('.topic.error');
+  const n_topicError = document.querySelector('.n_topic.error');
+  const nameError = document.querySelector('.name.error');
+  const linkError = document.querySelector('.link.error');
+  const sumbitError = document.querySelector('.submit.error');
+  
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    //reset errors
+    topicError.textContent = '';
+    n_topicError.textContent = '';
+    nameError.textContent = '';
+    linkError.textContent = '';
+    sumbitError.textContent = '';
+        
+    //get values
+    const topic = form.topic.value;
+    const topic_new = form.topic_new.value;
+    const name = form.name.value;
+    const link = form.link.value;
+    const logo = form.logo.value;
+
+      try{
+        const res = await fetch('/topics', {
+          method: 'POST',
+          body: JSON.stringify({topic: topic, name: name, link: link, topic_new: topic_new, logo: logo}),
+          headers: {'Content-Type': 'application/json'}
+        })
+        const data = await res.json();
+        console.log(data);
+      
+        if(data.error){
+          if(data.error.topic){
+            topicError.textContent = '* ' + data.error.topic;
+          }
+          if(data.error.name){
+            nameError.textContent = '* '+ data.error.name;
+          }
+          if(data.error.link){
+            linkError.textContent = '* '+ data.error.link;
+          }
+          if(data.error.topic_new){
+            n_topicError.textContent = '* '+ data.error.topic_new;
+          }
+          //topicError.textContent = '* ' + data.error.topic;
+          //nameError.textContent = '* '+ data.error.name;
+          //linkError.textContent = '* '+ data.error.link;
+          //n_topicError.textContent = data.error.topic_new;
+          sumbitError.textContent = 'Not saved';
+        }
+        if(data.msg){
+          sumbitError.textContent='Saved';
+        }
+     
+      }
+      catch(err){
+        console.log(err);
+      }
+
+  })
+
+
+
+</script>
+
+<!--<%- include('partials/footer'); -%>-->
+
+<!-- <footer>Copyright 2021</footer> -->
+</body>
+</html>
+

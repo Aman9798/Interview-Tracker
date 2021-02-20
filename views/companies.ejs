@@ -1,0 +1,329 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <!-- add to document <head> -->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style/companies.css">
+
+  <!-- add before </body> -->
+  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  
+  
+</head>
+<body>
+
+  <!-- <% var test = status1 %> -->
+  <nav>
+    <ul>
+      <% if(user){ %>
+        <li><a href='/home' class='back'> &#8592; Back</a> </li>
+        <% var x = user.name %>
+        <% x = x.split(' '); %>
+        <% let y = x[0]; %>
+        <% if(user.Admin){ %>
+          <li class='btns'><a href='/admin' class='admin'>Admin Page</a></li>
+        <% } %>
+        <li>Welcome : <strong><%= y %></strong></li>
+        <li class="btns"><a href='/logout' class='logout'>Log out</a></li>
+      <% } %>
+    </ul>
+  </nav>
+
+<h1>INTERVIEW TRACKER</h1>
+<!-- <p style='color: white;'><%= status1 %></p> -->
+<h2>Companies:</h2>
+
+<div id='topicss'> 
+  <ul >
+    <% for(var i=0; i < comp.length; i++){  %>
+      <% if(comp[i].verify){ %>
+        <% let t = "companies/" + comp[i].name %>
+        <li>
+          <a href=<%= t %>>
+            <div class='cards'>
+              <div class='image' >
+                  <img src=<%= comp[i].image %>>
+              </div>
+              <div id='title1' class='title'>
+                <a><%= comp[i].name %></a>
+              </div>
+            </div>
+          </a>
+        </li>
+    <% }} %>
+  </ul>
+</div>
+
+<div class="center">
+  <input type="checkbox" id="show">
+  <label for="show" class="show-btn">Add Experience</label>
+  <div class="container">
+      <label for="show" class="close-btn fas fa-times" title="close">X</label>
+      <!-- <div  id ='status' class="submit error"></div> -->
+      <div class="text">Add Experience</div>
+      <!-- <form action='#'-->
+      <form action="/companies" method="POST" enctype="multipart/form-data">
+          <!-- <form action='#' enctype="multipart/form-data"> -->
+          <div class="data">
+              <label for='company'>Already Present Company</label>
+              <!--<input type="text" name='topic' required>-->
+              <select name='company'>
+                <option value='company'>Company</option>
+                <% for(var i=0; i < comp.length; i++){  %>
+                  <% if(comp[i].verify){ %>
+                    <% x = comp[i].name %>
+                    <option value=<%= x %>><%= x %></option>
+                  <% }} %>
+              </select>
+              <div class="company error" ></div>
+          </div>
+          <div class="data">
+            <label for='company_new'> New Company</label>
+            <input class='des' type="text" name='company_new' placeholder="Don't fill if company is already present  (Don't include space in company's name 'use _')">
+            <div class="n_company error" ></div>
+          </div>
+          <div class='data'>
+            <label for='logo'>New Company Logo (link of the image)</label>
+            <input class='des' type='text' name='logo' placeholder="Only add company's logo link when new company is added">
+            <div class='logo error'></div>
+          </div>
+          <div class='data'>
+            <!-- <input type='file' for='image' name='uploaded_image' required /> -->
+            <label class='des' name='image' value="upload">Upload Your Photo</label>
+            <input type='file' for='image' name='uploaded_image' required />
+          </div>
+          <!-- <div class="data">
+              <label for='name'>Your name</label>
+              <input type="text" name='name'  required />
+              <div class="name error"></div>
+          </div>
+          <div class="data">
+              <label for='branch'>Branch</label>
+              <input type="text" name='branch'  required />
+              <div class="branch error"></div>
+          </div>
+          <div class="data">
+            <label for='year'>Year</label>
+            <input type="text" name='year'  required />
+            <div class="year error"></div>
+          </div> -->
+          <div class="data">
+            <label for='description'>Description</label>
+            <!-- <input type="text" name='description'  required /> -->
+            <textarea class ="des1" type ="text" name="description" id="myComment" placeholder="Add experience..." rows="4" cols="50" required></textarea>
+            <div class="experience error"></div>
+          </div>
+          <div class="btn">
+              <div class="inner"></div>
+              <button type="submit">Add</button>
+              <!--<div class="submit error" style="color: black; margin-top: 30px;"></div>-->
+          </div> 
+          <!-- <div  id ='status' class="submit error"><%= status1 %></div> -->
+          <!-- <div  id ='status' class="submit error"></div> -->
+      </form>
+  </div>
+</div>
+
+
+
+
+<script>
+
+  
+  // const list = document.getElementById('topicss')
+  // var topic2 = window.document.location.pathname;
+  // //console.log(topic2);
+  // list.addEventListener('click',function(e){
+  //   var topic = e.target.innerHTML;
+  //  //var topic =  e.target.parentNode.parentNode;
+  //  //var t2 = topic.getElementById('title1');
+  //  //console.log(t2);
+  //  //console.log(topic);
+  //   var topic3 = topic2 +'/'+ topic;
+  //   e.target.setAttribute('href',topic3); 
+
+  // })
+
+    
+  const list = document.getElementById('topicss')
+  var topic2 = window.document.location.pathname;
+  list.addEventListener('click',function(e){
+    var topic = e.target.innerHTML;
+    var topic3 = topic2 +'/'+ topic;
+    e.target.setAttribute('href',topic3); 
+
+  })
+
+  $(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
+
+  $(document).ready(function(){
+  $('.des1').keydown(function(event) {  
+     if(event.keyCode == 13) {                    
+      event.preventDefault();                   
+        var s = $(this).val();              
+        $(this).val(s+"\n"); 
+     }
+  });      
+});
+  
+  
+  //console.log(comp[0].name);
+  const form = document.querySelector('form');/*
+  const companyError = document.querySelector('.company.error');
+  const n_companyError = document.querySelector('.n_company.error');
+  const nameError = document.querySelector('.name.error');
+  const branchError = document.querySelector('.branch.error');
+  const yearError = document.querySelector('.year.error');
+  const descriptionError = document.querySelector('.experience.error');*/
+  const sumbitError = document.querySelector('.submit.error');
+
+  //sumbitError.textContent = '<%- status1 %>';
+// var gtest = <%= test %>
+// console.log(gtest);
+  // form.addEventListener('submit', async(e)=>{
+  // //  e.preventDefault();
+
+  //   //alert(status1);
+  //   sumbitError.textContent = '<%- status1 %>';
+
+  // })
+
+  // fetch("/companies")
+  //   // .then(respomse=>response.json())
+  //   .then(data => {
+  //     console.log(data);
+  //   });
+
+  // form.addEventListener('submit', async (e) => {
+  //   e.preventDefault();
+  //   //console.log(data);
+  //   fetch("/companies")
+  //   // .then(respomse=>response.json())
+  //     .then(data => {
+  //       console.log(data);
+  //     });
+  // }) 
+
+ // console.log(data);
+/*
+  $.ajax({
+    url: '',
+    type: '',
+    data: {},
+    success: function(data){
+        console.log(data);
+    }
+})
+  
+*/
+
+// $('#uploadForm').submit(function(e) {
+//     e.preventDefault();
+//     $.ajax({
+//         url: '/companies',
+//         data: {},
+//         type: 'POST',
+//         success: function(data) {
+//             alert(data);
+//         }
+//     });
+// });
+/*
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    //reset errors
+    /*companyError.textContent = '';
+    n_companyError.textContent = '';
+    nameError.textContent = '';
+    branchError.textContent = '';
+    yearError.textContent = '';
+    descriptionError.textContent = '';*/
+    //sumbitError.textContent = '';
+        
+    //get values
+  //  const company = form.company.value;
+  //   const company_new = form.company_new.value;
+  //   const name = form.name.value;
+  //   const branch = form.branch.value;
+  //   const year = form.year.value;
+  //   const description = form.description.value;
+  //   const image = form.file.val;
+  //   console.log(image);
+  // console.log(form.company.value);
+  // console.log(form.uploaded_image);
+/*
+      try{
+        const res = await fetch('/companies', {
+          
+          method: 'POST',
+          //body: JSON.stringify({company: company, name: name, branch: branch, company_new: company_new, year:year, description:description}),
+          //body: JSON.stringify({company: company, name: name, branch: branch, company_new: company_new, year:year, description:description}),
+          body: JSON.stringify({...form.data, ...form.files}),
+          headers: {'Content-Type': 'application/json'}
+        });
+        //console.log(res)
+        const data = await res.json();
+        //console.log(data);
+      
+        if(data.error){
+          sumbitError.textContent=' NOT Saved';
+        }
+
+          /*
+          if(data.error.company){
+            companyError.textContent = '* ' + data.error.company;
+          }
+          if(data.error.name){
+            nameError.textContent = '* '+ data.error.name;
+          }
+          if(data.error.branch){
+            branchError.textContent = '* '+ data.error.branch;
+          }
+          if(data.error.company_new){
+            n_companyError.textContent = '* '+ data.error.company_new;
+          }
+          if(data.error.year){
+            yearError.textContent = '* '+ data.error.year;
+          }
+          if(data.error.description){
+            descriptionError.textContent = '* '+ data.error.description;
+          }
+          //topicError.textContent = '* ' + data.error.topic;
+          //nameError.textContent = '* '+ data.error.name;
+          //linkError.textContent = '* '+ data.error.link;
+          //n_topicError.textContent = data.error.topic_new;
+          sumbitError.textContent = 'Not saved';
+        }
+        */
+      /*  if(data.msg){
+          sumbitError.textContent='Saved';
+        }
+      }
+      
+      catch(err){
+        console.log(err);
+      }
+
+  })
+
+*/
+</script>
+
+  </body>
+  </html>
+  

@@ -1,0 +1,44 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/home.css">
+  
+</head>
+<body>
+  
+  <nav>
+    <ul>
+      <% if(user){ %>
+        <li>IIT Guwahati</li>
+        <% var x = user.name %>
+        <% x = x.split(' '); %>
+        <% let y = x[0]; %>
+        <% if(user.Admin){ %>
+          <li class='btns'><a href='/admin' class='admin'>Admin Page</a></li>
+        <% } %>
+        <li>Welcome : <strong><%= y %></strong></li>
+        <li class="btns"><a href='/logout' class='logout'>Log out</a></li>
+      <% } %>
+    </ul>
+  </nav>
+  
+
+  <h1>INTERVIEW TRACKER</h1>
+  <div class = "navs">
+    <div class = 'logoimg'>
+      <img class='logo' src='/Site_logos/logo.png'>
+    </div>
+    <div class= 'gotos'>
+      <strong>
+        <a href="/topics" class="btn2">View Questions</a>
+      <br><br><br><br>
+      <a href="/companies" class="btn2">View Experiences</a>
+      </strong>
+    </div>
+  </div>
+
+</body>
+</html>

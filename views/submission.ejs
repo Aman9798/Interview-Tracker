@@ -1,0 +1,136 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Preparation</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/submission.css">
+  
+</head>
+<body>
+  
+
+<a href='/home' class='back'> &#8592; Back to form</a> 
+<header>
+    <h2>INTERVIEW TRACKER</h2>
+</header>
+<!-- 
+<div class="sub" >
+<% if(msg){ %>
+    <p>Submission status : </p>
+    <p><%= msg %></p></br>
+<% } %>
+<% if(err){ %>
+    <% if(err.company){ %>
+        <p>Comapny Name Error : </p>
+        <p><%= err.company %></p></br>
+    <% }
+    if(err.company_new){ %>
+        <p>New Comapny Name Error : </p>
+        <p><%= err.company_new %></p> 
+<% }} %>
+</div> -->
+
+<form>
+    <label>Submission status : </label>
+    <p><%= msg %></p>
+
+    <% if(err){ %>
+        <% if(err.company){ %>
+            <label>Comapny Name Error : </label>
+            <p><%= err.company %></p>
+        <% } %>
+        <% if(err.company_new){ %>
+            <label>New Comapny Name Error : </label>
+            <p><%= err.company_new %></p>
+    <% }} %>
+
+    <button><a class = "page" href='/companies'>Click here to go to Companies page</a></button>
+
+    
+</form>
+
+<!--
+<script>
+  const list = document.getElementById('topicss')
+  var topic2 = window.document.location.pathname;
+  list.addEventListener('click',function(e){
+    var topic = e.target.innerHTML;
+    var topic3 = topic2 + '/' + topic;
+    e.target.setAttribute('href',topic3); 
+
+  })
+  const form = document.querySelector('form');
+  const topicError = document.querySelector('.topic.error');
+  const n_topicError = document.querySelector('.n_topic.error');
+  const nameError = document.querySelector('.name.error');
+  const linkError = document.querySelector('.link.error');
+  const sumbitError = document.querySelector('.submit.error');
+  
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    //reset errors
+    topicError.textContent = '';
+    n_topicError.textContent = '';
+    nameError.textContent = '';
+    linkError.textContent = '';
+    sumbitError.textContent = '';
+        
+    //get values
+    const topic = form.topic.value;
+    const topic_new = form.topic_new.value;
+    const name = form.name.value;
+    const link = form.link.value;
+    const logo = form.logo.value;
+
+      try{
+        const res = await fetch('/topics', {
+          method: 'POST',
+          body: JSON.stringify({topic: topic, name: name, link: link, topic_new: topic_new, logo: logo}),
+          headers: {'Content-Type': 'application/json'}
+        })
+        const data = await res.json();
+        console.log(data);
+      
+        if(data.error){
+          if(data.error.topic){
+            topicError.textContent = '* ' + data.error.topic;
+          }
+          if(data.error.name){
+            nameError.textContent = '* '+ data.error.name;
+          }
+          if(data.error.link){
+            linkError.textContent = '* '+ data.error.link;
+          }
+          if(data.error.topic_new){
+            n_topicError.textContent = '* '+ data.error.topic_new;
+          }
+          //topicError.textContent = '* ' + data.error.topic;
+          //nameError.textContent = '* '+ data.error.name;
+          //linkError.textContent = '* '+ data.error.link;
+          //n_topicError.textContent = data.error.topic_new;
+          sumbitError.textContent = 'Not saved';
+        }
+        if(data.msg){
+          sumbitError.textContent='Saved';
+        }
+     
+      }
+      catch(err){
+        console.log(err);
+      }
+
+  })
+
+
+
+</script>
+-->
+<!--<%- include('partials/footer'); -%>-->
+
+<!-- <footer>Copyright 2021</footer> -->
+</body>
+</html>
+
