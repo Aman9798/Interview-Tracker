@@ -37,7 +37,5 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
-  },
-  "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
+  }
 }
