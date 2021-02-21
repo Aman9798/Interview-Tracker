@@ -58,12 +58,12 @@ Some of the packages/dependencies used in developing this website are :
  1) On clicking on the "View Eperience" button, the user will be directed to the experience section of the page.
 
  &nbsp; &nbsp; **Companies:** <br />
-    &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different campuses across the country.
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that company.
+    &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different campuses across the country. <br />
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that company. 
    <img src="screenshot/companies.png" >
    
  &nbsp; &nbsp; **Experiences:** <br />
-    &nbsp; &nbsp; &nbsp; 1) This page contains experience of different students who qualified the interview of that company.
+    &nbsp; &nbsp; &nbsp; 1) This page contains experience of different students who qualified the interview of that company. <br />
     &nbsp; &nbsp; &nbsp; 2) On clicking on "Red More" button, the full experience of that students will be shown.
     <img src="screenshot/experiences.png" >
 
