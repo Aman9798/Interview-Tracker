@@ -14,6 +14,6 @@ Setting up:
 
 Some of the packages/dependencies used in developing this website are :
  1) [Admin-Bro](https://adminbro.com/section-modules.html)
- 2) Express
- 3) Mongoose
- 4) Nodemon
+ 2) [Express](http://expressjs.com/)
+ 3) [Mongoose](https://mongoosejs.com/docs/)
+ 4) [Nodemon](https://nodemon.io/)
