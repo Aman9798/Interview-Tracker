@@ -13,7 +13,7 @@ Setting up:
  4) Run the site using cmomand "node app.js" and visit the website on "http://localhost:3000/"
 
 Some of the packages/dependencies used in developing this website are :
- 1) https://adminbro.com/section-modules.html
+ 1) [Admin-Bro](https://adminbro.com/section-modules.html)
  2) Express
  3) Mongoose
  4) Nodemon
