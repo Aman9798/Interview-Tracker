@@ -41,16 +41,16 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Coding topics:** <br />
     &nbsp; &nbsp; &nbsp; 1) Questions have been well classified in different Topics. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the topic name the questions of that particular topic will be shown. <br />
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the topic name the questions of that particular topic will be shown. <br /> <br />
    <img src="screenshot/topics.png" >
    
- &nbsp; &nbsp; **Coding Questions:**
+ &nbsp; &nbsp; **Coding Questions:** <br />
     &nbsp; &nbsp; &nbsp; 1) In this page, questions based on that particular topic are displayed. <br />
-    &nbsp; &nbsp; &nbsp; 2) Another adventage is that Questions from different sources and platforms are present. <br />
+    &nbsp; &nbsp; &nbsp; 2) Another adventage is that Questions from different sources and platforms are present. <br /> <br />
    <img src="screenshot/questions.png" >
 
- &nbsp; &nbsp; **Adding Question:**
+ &nbsp; &nbsp; **Adding Question:** <br />
     &nbsp; &nbsp; &nbsp; 1) In the Topics Page, the user can add question of different. <br />
-    &nbsp; &nbsp; &nbsp; 2) The user can add a whole new topic if the topic is not present. <br />
+    &nbsp; &nbsp; &nbsp; 2) The user can add a whole new topic if the topic is not present. <br /> <br />
    <img src="screenshot/add_question.png" >
     
