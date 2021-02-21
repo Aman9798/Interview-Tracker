@@ -19,7 +19,7 @@ Some of the packages/dependencies used in developing this website are :
  4) [Nodemon](https://nodemon.io/)
 
 **Login/Signup page: <br />** 
- . The user get directed to the Login page. if the user don't have an account then he/she can visit the signup page and create a new account.
+  The user get directed to the Login page. if the user don't have an account then he/she can visit the signup page and create a new account.
 
 <img src="screenshot/login.png" >
 <img src="screenshot/signup.png" >
