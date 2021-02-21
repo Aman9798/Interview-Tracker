@@ -66,7 +66,16 @@ Some of the packages/dependencies used in developing this website are :
     <img src="screenshot/experiences.png" >
 
  &nbsp; &nbsp; **Add Experience:** <br />
-    &nbsp; &nbsp; &nbsp; 1) In the companies Page, the user can add interview experience.
+    &nbsp; &nbsp; &nbsp; 1) In the companies Page, the user can add interview experience. <br />
     &nbsp; &nbsp; &nbsp; 2) The user can also add a whole new company if it is not present already along with company's logo link.
     <img src="screenshot/add_experience.png" >
     
+**Admin Page Login**
+  1) One the Home Page, there is a "Admin Page" button which is visible to the admins only.
+  2) On clicking on the "Admin Page" button, the user gets directed to the login page for the Admin page.
+  <img src="screenshot/admin-login.png" >
+  
+**Admin Page**
+  1) If the user is a admin then he/she will be able able to login to the Admin page.
+  2) Through this the Admins can the data in the database and can also a particular data to be shown or not.
+   <img src="screenshot/admin-page.png" >
