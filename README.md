@@ -6,7 +6,6 @@ Our first project where we build Centralized solution for interview preparation.
  3) Here you can also see the experience shared by the people who qualified the interview.
 
 **Setting up:**
-
  1) Install node.js
  2) Set up mongo server
  3) Install all the dependancies using commonad "npm install"
@@ -27,7 +26,7 @@ Some of the packages/dependencies used in developing this website are :
   After login/signup the user is directed to the home page  
  <img src="screenshot/home.png" >
  
- **The home page contains 2 sections**
+ **The home page contains 2 sections:**
  1) Coding Section
  2) Interview Expereince Section
 
