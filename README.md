@@ -34,11 +34,11 @@ Some of the packages/dependencies used in developing this website are :
  1) The main component for interview prepapration is the coding round which requires a lot of practice.
  2) The website has various topics and questions enlisted in it for topic wise practice.
  3) Questions have been well classified in different Topics.
- 4) On clicking on the "View Topics" button, all the topics will be shown.
+ 4) On clicking on the "**View Topics**" button, all the topics will be shown.
 
  &nbsp; &nbsp; **Coding topics:** <br />
     &nbsp; &nbsp; &nbsp; 1) Questions have been well classified in different Topics. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the topic's name, the questions related to that particular topic will be shown. 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the **topic's name**, the questions related to that particular topic will be shown. 
    <img src="screenshot/topics.png" >
    
  &nbsp; &nbsp; **Coding Questions:** <br />
@@ -52,17 +52,17 @@ Some of the packages/dependencies used in developing this website are :
    <img src="screenshot/add_question.png" >
    
 **Interview Expereince Section**
- 1) On clicking on the "View Eperience" button, the user will be directed to the experience section of the page.
+ 1) On clicking on the "**View Experience**" button, the user will be directed to the experience section of the page.
 
  &nbsp; &nbsp; **Companies:** <br />
     &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different colleges across the country. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students who qualified the 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "**Company name**" , the user will be directed to page containing experience of different students who qualified the 
     &nbsp; &nbsp; &nbsp; &nbsp; interview of that  company. 
    <img src="screenshot/companies.png" >
    
  &nbsp; &nbsp; **Experiences:** <br />
     &nbsp; &nbsp; &nbsp; 1) This page contains experience of different students who qualified the interview of that company. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on "Read More" button, the full experience of that students will be displayed.
+    &nbsp; &nbsp; &nbsp; 2) On clicking on "**Read More**" button, the full experience of that students will be displayed.
     <img src="screenshot/experiences.png" >
 
  &nbsp; &nbsp; **Add Experience:** <br />
@@ -71,8 +71,8 @@ Some of the packages/dependencies used in developing this website are :
     <img src="screenshot/add_experience.png" >
     
 **Admin Page Login**
-  1) One the Home Page, there is a "Admin Page" button which is visible to the admins only.
-  2) On clicking on the "Admin Page" button, the user gets directed to the login page for the Admin.
+  1) One the Home Page, there is a "**Admin Page**" button which is visible to the admins only.
+  2) On clicking on the "**Admin Page**" button, the user gets directed to the login page for the Admin.
   <img src="screenshot/admin-login.png" >
   
 **Admin Page**
