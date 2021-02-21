@@ -23,3 +23,8 @@ Some of the packages/dependencies used in developing this website are :
 
 <img src="screenshot/login.png" >
 <img src="screenshot/signup.png" >
+
+**Home page: <br />**
+  After login/signup the user is directed to the home page
+  
+ <img src="screenshot/home.png" >
