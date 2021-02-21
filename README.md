@@ -8,8 +8,8 @@ Our first project where we built centralized solution for interview preparation.
 **Setting up:**
  1) Install node.js
  2) Set up mongo server
- 3) Install all the dependancies using commonad "npm install"
- 4) Run the site using cmomand "node app.js" and visit the website on "http://localhost:3000/"
+ 3) Install all the dependancies using command "npm install"
+ 4) Run the site using command "nodemon app" and visit the website on "http://localhost:3000/"
 
 Some of the packages/dependencies used in developing this website are :
  1) [Admin-Bro](https://adminbro.com/section-modules.html)
