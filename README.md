@@ -66,7 +66,7 @@ Some of the packages/dependencies used in developing this website are :
     <img src="screenshot/experiences.png" >
 
  &nbsp; &nbsp; **Add Experience:** <br />
-    &nbsp; &nbsp; &nbsp; 1) In the Companie's Page, the user can add Interview Experience. <br />
+    &nbsp; &nbsp; &nbsp; 1) In the Companies Page, the user can add Interview Experience. <br />
     &nbsp; &nbsp; &nbsp; 2) The user can also add a whole new company if it is not present already along with company's logo link.
     <img src="screenshot/add_experience.png" >
     
