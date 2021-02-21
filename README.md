@@ -1,6 +1,6 @@
 # Interview Tracker Website
 
-Our first project where we build Centralized solution for interview preparation.
+Our first project where we built centralized solution for interview preparation.
  1) Most of the face huge difficulties for interview preparation as all the essential materials for preparation are not present in single website.
  2) So we made up an awesome website where you can find all the great and important coding questions.
  3) Here you can also see the experience shared by the people who qualified the interview.
