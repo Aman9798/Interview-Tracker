@@ -84,4 +84,10 @@ Some of the packages/dependencies used in developing this website are :
    
  # &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Thank you for going through our website
  
+ # Contributers 
+  1) **Aman Kumar**
+  2) **Aakash Solanki**
+  3) **Yashwardhan Modi**
+  4) **Yogesh Sahota**
+ 
  
