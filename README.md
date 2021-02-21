@@ -56,7 +56,7 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Companies:** <br />
     &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different campuses across the country. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that  company. 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the &nbsp; &nbsp; &nbsp; &nbsp; interview of that  company. 
    <img src="screenshot/companies.png" >
    
  &nbsp; &nbsp; **Experiences:** <br />
