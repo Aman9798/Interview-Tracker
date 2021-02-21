@@ -41,17 +41,17 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Coding topics:** <br />
     &nbsp; &nbsp; &nbsp; 1) Questions have been well classified in different Topics. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the topic name the questions of that particular topic will be shown. <br /> 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the topic name the questions of that particular topic will be shown. 
    <img src="screenshot/topics.png" >
    
  &nbsp; &nbsp; **Coding Questions:** <br />
     &nbsp; &nbsp; &nbsp; 1) In this page, questions based on that particular topic are displayed. <br />
-    &nbsp; &nbsp; &nbsp; 2) Another adventage is that Questions from different sources and platforms are present. <br /> 
+    &nbsp; &nbsp; &nbsp; 2) Another adventage is that Questions from different sources and platforms are present. 
    <img src="screenshot/questions.png" >
 
  &nbsp; &nbsp; **Adding Question:** <br />
     &nbsp; &nbsp; &nbsp; 1) In the Topics Page, the user can add question of different. <br />
-    &nbsp; &nbsp; &nbsp; 2) The user can add a whole new topic if the topic is not present. <br />
+    &nbsp; &nbsp; &nbsp; 2) The user can add a whole new topic if the topic is not present.
    <img src="screenshot/add_question.png" >
    
 **Interview Expereince Section**
@@ -59,7 +59,7 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Companies:** <br />
     &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different campuses across the country. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that company. 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that     &nbsp; &nbsp; &nbsp; &nbsp; company. 
    <img src="screenshot/companies.png" >
    
  &nbsp; &nbsp; **Experiences:** <br />
