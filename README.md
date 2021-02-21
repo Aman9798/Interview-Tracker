@@ -29,6 +29,6 @@ Some of the packages/dependencies used in developing this website are :
   
  <img src="screenshot/home.png" >
  
- The home page contains 2 sections
+ **The home page contains 2 sections**
  1) Coding Section
  2) Interview Expereince Section
