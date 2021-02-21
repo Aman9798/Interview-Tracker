@@ -20,13 +20,11 @@ Some of the packages/dependencies used in developing this website are :
 
 **Login/Signup page: <br />** 
   The user get directed to the Login page. if the user don't have an account then he/she can visit the signup page and create a new account.
-
 <img src="screenshot/login.png" >
 <img src="screenshot/signup.png" >
 
 **Home page: <br />**
-  After login/signup the user is directed to the home page
-  
+  After login/signup the user is directed to the home page  
  <img src="screenshot/home.png" >
  
  **The home page contains 2 sections**
@@ -59,7 +57,7 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Companies:** <br />
     &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different campuses across the country. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that     &nbsp; &nbsp; &nbsp; &nbsp; company. 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "Company name" , the user will be directed to page containing experience of different students wo qualified the interview of that  company. 
    <img src="screenshot/companies.png" >
    
  &nbsp; &nbsp; **Experiences:** <br />
