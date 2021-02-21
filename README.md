@@ -28,3 +28,7 @@ Some of the packages/dependencies used in developing this website are :
   After login/signup the user is directed to the home page
   
  <img src="screenshot/home.png" >
+ 
+ The home page contains 2 sections
+ 1) Coding Section
+ 2) Interview Expereince Section
