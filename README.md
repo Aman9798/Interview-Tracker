@@ -38,7 +38,7 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Coding topics:** <br />
     &nbsp; &nbsp; &nbsp; 1) Questions have been well classified in different Topics. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the **topic's name**, the questions related to that particular topic will be shown. 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "**topic's name**", the questions related to that particular topic will be shown. 
    <img src="screenshot/topics.png" >
    
  &nbsp; &nbsp; **Coding Questions:** <br />
@@ -56,7 +56,7 @@ Some of the packages/dependencies used in developing this website are :
 
  &nbsp; &nbsp; **Companies:** <br />
     &nbsp; &nbsp; &nbsp; 1) This section contains list of companies that have recruited from different colleges across the country. <br />
-    &nbsp; &nbsp; &nbsp; 2) On clicking on the "**Company name**" , the user will be directed to page containing experience of different students who qualified the 
+    &nbsp; &nbsp; &nbsp; 2) On clicking on the "**Company's name**" , the user will be directed to page containing experience of different students who qualified the 
     &nbsp; &nbsp; &nbsp; &nbsp; interview of that  company. 
    <img src="screenshot/companies.png" >
    
