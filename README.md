@@ -79,3 +79,9 @@ Some of the packages/dependencies used in developing this website are :
   1) If the user is an admin then he/she will be able able to login to the Admin page.
   2) Through this, the Admins can access the data in the database and can also decide whether a particular data will be shown or not.
    <img src="screenshot/admin-page.png" >
+   
+   <br />
+   
+ # &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Thank you for going through our website
+ 
+ 
