@@ -32,3 +32,25 @@ Some of the packages/dependencies used in developing this website are :
  **The home page contains 2 sections**
  1) Coding Section
  2) Interview Expereince Section
+
+**Coding Section**
+ 1) The main component for interview prepapration is the coding round which requires a lot of practice.
+ 2) The website has various topics and questions enlisted in it for topic wise practice.
+ 3) Questions have been well classified in different Topics.
+ 4) On clicking on the "View Topics" button, all the question topics willl be shown.
+
+ &nbsp; &nbsp; **Coding topics**
+   &nbsp; &nbsp; 1) Questions have been well classified in different Topics.
+   &nbsp; &nbsp; 2) On clicking on the topic name the questions of that particular topic will be shown.
+   <img src="screenshot/topics.png" >
+   
+ &nbsp; &nbsp; **Coding Questions**
+   &nbsp; &nbsp; 1) In this page, questions based on that particular topic are displayed.
+   &nbsp; &nbsp; 2) Another adventage is that Questions from different sources and platforms are present.
+   <img src="screenshot/questions.png" >
+
+ &nbsp; &nbsp; **Adding Question**
+   &nbsp; &nbsp; 1) In the Topics Page, the user can add question of different.
+   &nbsp; &nbsp; 2) The user can add a whole new topic if the topic is not present.
+   <img src="screenshot/add_question.png" >
+    
